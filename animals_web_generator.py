@@ -14,7 +14,7 @@ def build_animals_string(animals_data):
     output = ""
 
     for animal in animals_data:
-        output += '<li class="cards_item">\n'
+        output += '<li class="cards__item">\n'
 
         if 'name' in animal:
             output += f"Name: {animal['name']}<br/>\n"
@@ -28,7 +28,7 @@ def build_animals_string(animals_data):
         if 'characteristics' in animal and "type" in animal['characteristics']:
             output += f"Type: {animal['characteristics']['type']}<br/>\n"
 
-        output += "</li>"
+        output += "</li\n>"
     return output
 
 def write_html_file(file_path, content):
